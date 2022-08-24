@@ -40,6 +40,10 @@ app.use(boomErrorHandler);
 app.use(errorHandler);
 
 
+console.log(
+  `env:${environment.env}. is prod: ${environment.isProd}`
+);
+
 app.listen(environment.port, () => {
   console.log(`server listen on http://${environment.dbHost}:${environment.port}/api/v1`);
 });
